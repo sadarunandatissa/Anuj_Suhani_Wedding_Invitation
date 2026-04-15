@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suhani & Anuj - Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="locked">
+    <section id="hero" class="fullscreen-section">
+      <div class="content-wrapper reveal">
+        <h1 class="hero-heading reveal delay-1">Wedding Ceremony</h1>
+        <button id="invitation-btn" class="btn reveal delay-2">
+          Invitation
+        </button>
+      </div>
+    </section>
+
+    <section id="names" class="fullscreen-section">
+      <div class="content-wrapper reveal">
+        <h2 class="couple-names reveal delay-1">Suhani <span>&</span> Anuj</h2>
+        <p class="subtitle reveal delay-2">ARE GETTING MARRIED</p>
+      </div>
+    </section>
+
+    <section id="parents" class="fullscreen-section">
+      <div class="content-wrapper reveal">
+        <p class="invite-text reveal delay-1">
+          YOU ARE CORDIALLY INVITED TO JOIN US IN THE CELEBRATION AND BLESS THE
+          NEW COUPLE
+        </p>
+        <div class="parents-details">
+          <div class="parent-box reveal delay-2">
+            <h3>Suhani</h3>
+            <p>Beloved Daughter of</p>
+            <p>
+              <strong>Mr. Rajesh Ranathunga & Mrs. Mallika Wijesingle</strong>
+            </p>
+          </div>
+          <div class="parent-box reveal delay-3">
+            <h3>Anuj</h3>
+            <p>Beloved Son of</p>
+            <p>
+              <strong
+                >Mr. Chandima Rathnayaka & Mrs. Sanjeewani Edirisinghe</strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="details" class="fullscreen-section">
+      <div class="content-wrapper reveal">
+        <h2 class="section-title reveal delay-1">Save The Date</h2>
+        <p class="date-text reveal delay-2">7th December 2026</p>
+        <p class="time-text reveal delay-3">10:30 PM Onwards</p>
+        <p class="venue-text reveal delay-4">The Epitome Hotel, Kurunegala</p>
+        <a
+          href="https://maps.google.com/?q=The+Epitome+Hotel,+Kurunegala"
+          target="_blank"
+          class="btn map-btn reveal delay-5"
+        >
+          <i class="fas fa-map-marker-alt"></i> Find Direction
+        </a>
+      </div>
+    </section>
+
+    <section id="countdown-section" class="fullscreen-section">
+      <div class="content-wrapper reveal">
+        <h2 class="section-title reveal delay-1">Counting Down The Days</h2>
+        <div class="countdown-container reveal delay-2">
+          <span id="days-count">00</span>
+          <span class="days-label">Days Left</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="carousel-section" class="fullscreen-section">
+      <div class="content-wrapper reveal">
+        <h2 class="section-title reveal delay-1">The Venue</h2>
+        <div class="scene reveal delay-2">
+          <div class="carousel" id="hotel-carousel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="fullscreen-section">
+      <div class="content-wrapper reveal">
+        <h2 class="section-title reveal delay-1">RSVP</h2>
+        <form class="rsvp-form reveal delay-2" id="rsvp-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <select required>
+            <option value="" disabled selected>Will you attend?</option>
+            <option value="yes">Joyfully Accept</option>
+            <option value="no">Regretfully Decline</option>
+          </select>
+          <input type="number" placeholder="Number of Guests" min="1" max="5" />
+          <button type="submit" class="btn">Send RSVP</button>
+        </form>
+      </div>
+    </section>
+
+    <a href="#" id="chat-btn" class="chat-btn">
+      <i class="fas fa-comments"></i> Chat with us
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

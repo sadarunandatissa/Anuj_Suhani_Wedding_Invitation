@@ -1,0 +1,328 @@
+/* --- Base Reset & Background --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  /* Permanent fixed background */
+  background: url("https://i.pinimg.com/1200x/6a/9e/6b/6a9e6b1792fedec9c5d53aeb6932cc05.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #2c3e50; /* Darker text for visibility against the background */
+  overflow-x: hidden;
+}
+
+/* Lock scroll on load */
+body.locked {
+  overflow-y: hidden;
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.couple-names {
+  font-family: "Great Vibes", cursive;
+  font-size: 5rem;
+  color: #5a4634;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+}
+
+.couple-names span {
+  font-size: 3rem;
+  color: #8c7355;
+}
+
+/* --- Layout Elements --- */
+.fullscreen-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: transparent; /* Fully transparent as requested */
+}
+
+.content-wrapper {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.15
+  ); /* Slight glass effect to make text readable */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hero-heading {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* --- Buttons --- */
+.btn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background-color: rgba(90, 70, 52, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn:hover {
+  background-color: rgba(90, 70, 52, 1);
+  transform: scale(1.05);
+}
+
+.map-btn {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+/* --- Specific Sections --- */
+.subtitle {
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.invite-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.parents-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.parent-box h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-family: "Great Vibes", cursive;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.date-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.time-text {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.venue-text {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+/* Countdown */
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#days-count {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #5a4634;
+}
+
+.days-label {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* --- 3D Carousel --- */
+.scene {
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 200px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 40s infinite linear;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* --- RSVP Form --- */
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  padding: 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* --- Floating Chat Button --- */
+.chat-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #5a4634;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+}
+
+.chat-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.chat-btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 3rem;
+  }
+  .couple-names {
+    font-size: 4rem;
+  }
+  .parents-details {
+    flex-direction: column;
+  }
+  .scene {
+    height: 250px;
+  }
+  .carousel {
+    width: 150px;
+    height: 200px;
+  }
+  .carousel-item {
+    width: 150px;
+    height: 200px;
+  }
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+/* This class is added by Javascript when the element is on screen */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Delays for elements inside a section */
+.reveal.delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal.delay-2 {
+  transition-delay: 0.3s;
+}
+.reveal.delay-3 {
+  transition-delay: 0.5s;
+}
+.reveal.delay-4 {
+  transition-delay: 0.7s;
+}
+.reveal.delay-5 {
+  transition-delay: 0.9s;
+}
+
+/* Remove initial blur/shadow effects during animation to keep it smooth */
+.content-wrapper.reveal {
+  transition:
+    opacity 1s ease-out,
+    transform 1s ease-out,
+    backdrop-filter 1s ease-out;
+}
